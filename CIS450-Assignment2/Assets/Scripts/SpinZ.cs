@@ -1,3 +1,9 @@
+/*
+ * Lucas Johnson
+ * SpinZ
+ * Assignment 2
+ * Concrete SpinZ Class
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

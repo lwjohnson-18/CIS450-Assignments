@@ -1,3 +1,9 @@
+/*
+ * Lucas Johnson
+ * SpinY
+ * Assignment 2
+ * Concrete SpinY Class
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

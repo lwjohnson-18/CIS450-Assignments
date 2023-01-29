@@ -1,3 +1,9 @@
+/*
+ * Lucas Johnson
+ * Cylinder
+ * Assignment 2
+ * Concrete Cylinder Class
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

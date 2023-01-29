@@ -1,3 +1,9 @@
+/*
+ * Lucas Johnson
+ * Cube
+ * Assignment 2
+ * Concrete Cube Class
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

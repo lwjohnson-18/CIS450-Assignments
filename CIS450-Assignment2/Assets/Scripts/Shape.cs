@@ -1,3 +1,9 @@
+/*
+ * Lucas Johnson
+ * Shape
+ * Assignment 2
+ * Abstract Shape Class
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

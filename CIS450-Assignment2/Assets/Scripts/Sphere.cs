@@ -1,3 +1,9 @@
+/*
+ * Lucas Johnson
+ * Sphere
+ * Assignment 2
+ * Concrete Sphere Class
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
