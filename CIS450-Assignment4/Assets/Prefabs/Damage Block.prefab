@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 1380601032841102074}
   - component: {fileID: 5601568129717270820}
   - component: {fileID: 1708207754272920732}
+  - component: {fileID: 2637485709792045066}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Damage Block
   m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,5 +126,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b44790fa2816f4b44b4fd8388b51ecd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2637485709792045066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477067400574846885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f3b22861f2ae243a596fe6fb6366d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
