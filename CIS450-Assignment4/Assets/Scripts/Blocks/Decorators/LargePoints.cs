@@ -10,16 +10,20 @@ using UnityEngine;
 
 public class LargePoints : BlockDecorator
 {
-    public Block wrappedBlock;
-    public int pointValue;
-
-    public override void ApplyBehaviour()
+    public void Awake()
     {
-        pointValue = 100;
+        blockColor = FindObjectOfType<ObjectSpawnerController>().objectColors[2];
+        pointValue = 500;
+    }
+
+    public override int GetPointValue()
+    {
+        return wrappedBlock.pointValue + pointValue;
     }
 
     public override void PlayerInteraction()
     {
-
+        FindObjectOfType<ScoreController>().UpdateScore(GetPointValue());
+        Destroy(gameObject);
     }
 }

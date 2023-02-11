@@ -10,13 +10,15 @@ using UnityEngine;
 
 public class DamageBlock : Block
 {
-    public override void ApplyBehaviour()
+    public void Awake()
     {
-        
+        blockColor = FindObjectOfType<ObjectSpawnerController>().objectColors[0];
+        pointValue = 0;
     }
 
     public override void PlayerInteraction()
     {
-        
+        FindObjectOfType<PlayerController>().TakeDamage();
+        Destroy(gameObject);
     }
 }

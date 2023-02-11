@@ -10,6 +10,7 @@ using UnityEngine;
 
 public abstract class BlockDecorator : Block
 {
-    public BlockDecorator()
-    { }
+    public Block wrappedBlock;
+
+    public new abstract int GetPointValue();
 }

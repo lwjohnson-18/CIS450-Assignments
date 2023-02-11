@@ -10,21 +10,13 @@ using UnityEngine;
 
 public abstract class Block : MonoBehaviour
 {
-    private Material blockColor;
+    public Material blockColor;
+    public int pointValue;
 
-    public abstract void ApplyBehaviour();
+    public int GetPointValue()
+    {
+        return pointValue;
+    }
 
     public abstract void PlayerInteraction();
-
-    public Material BaseColor
-    {
-		get
-		{
-			return blockColor;
-		}
-		set
-		{
-			blockColor = value;
-		}
-	}
 }

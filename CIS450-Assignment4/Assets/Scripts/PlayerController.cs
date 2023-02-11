@@ -38,14 +38,6 @@ public class PlayerController : MonoBehaviour, Subject
         transform.position = newPos;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.CompareTag("Object"))
-        {
-            TakeDamage();
-        }
-    }
-
     public void RegisterObserver(Observer o)
     {
         observers.Add(o);

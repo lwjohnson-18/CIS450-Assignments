@@ -10,13 +10,20 @@ using UnityEngine;
 
 public class NeutralBlock : Block
 {
-    public override void ApplyBehaviour()
+    public void Awake()
     {
-
+        pointValue = 0;
     }
 
     public override void PlayerInteraction()
     {
-
+        if (TryGetComponent(out BlockDecorator decorator))
+        {
+            decorator.PlayerInteraction();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -10,8 +10,22 @@ using UnityEngine;
 
 public class ObjectBehaviour : MonoBehaviour
 {
+    Block blockScript;
+
+    private void Start()
+    {
+        blockScript = GetComponent<Block>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            blockScript.PlayerInteraction();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
