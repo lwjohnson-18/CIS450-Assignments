@@ -8,8 +8,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletBehaviour : MonoBehaviour
+public enum BulletColor
 {
+    Red,
+    Green,
+    Blue
+}
+
+public abstract class BulletBehaviour : MonoBehaviour
+{
+    public BulletColor bulletColor;
+
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);

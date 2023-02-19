@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2785199547207103149}
   - component: {fileID: 97800520328079163}
   - component: {fileID: 480037414181211321}
-  - component: {fileID: 7550807382111271415}
+  - component: {fileID: 439420118212277705}
   m_Layer: 0
   m_Name: Red Bullet
   m_TagString: Red
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7550807382111271415
+--- !u!114 &439420118212277705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6982457025309790845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f04c42ba38a62b478ee684b96d18ad0, type: 3}
+  m_Script: {fileID: 11500000, guid: d5a792eb40531314588af63c49491afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletColor: 0

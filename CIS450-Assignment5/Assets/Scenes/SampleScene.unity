@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 261558903}
   - component: {fileID: 261558907}
   - component: {fileID: 261558908}
+  - component: {fileID: 261558909}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -249,14 +250,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c5460db3ab28d4093b1d361ef4f742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectiles:
-  - {fileID: 6982457025309790845, guid: 210dd573720e84e459972bee4991e4f7, type: 3}
-  - {fileID: 1015765125169006722, guid: 1507a1e53633c83448364d38b4c7c697, type: 3}
-  - {fileID: 1381352870921476358, guid: b74e1b832a364f048b58708e15623506, type: 3}
+  bulletFactory: {fileID: 261558909}
   firePoint: {fileID: 688673497}
   projectileForce: 20
   timeBetweenShots: 0.5
   destroyDelay: 2
+--- !u!114 &261558909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261558902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d222e6691c1ac4a4eb8ac113462d3f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefabs:
+  - {fileID: 6982457025309790845, guid: 210dd573720e84e459972bee4991e4f7, type: 3}
+  - {fileID: 1015765125169006722, guid: 1507a1e53633c83448364d38b4c7c697, type: 3}
+  - {fileID: 1381352870921476358, guid: b74e1b832a364f048b58708e15623506, type: 3}
 --- !u!1 &384202210
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,8 +569,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Goal: \nShoot blocks before\n they hit the ground\n with the matching\n
-    color bullet."
+  m_text: "Goal: \nShoot blocks before\n they hit the ground\n with the matching\ncolor
+    bullet."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

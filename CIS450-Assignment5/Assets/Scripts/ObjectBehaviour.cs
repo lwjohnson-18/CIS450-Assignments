@@ -10,6 +10,8 @@ using UnityEngine;
 
 public class ObjectBehaviour : MonoBehaviour
 {
+    public BulletColor blockColor;
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player"))
@@ -20,7 +22,7 @@ public class ObjectBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag(gameObject.tag))
+        if (other.GetComponent<BulletBehaviour>().bulletColor.Equals(blockColor))
         {
             Destroy(gameObject);
         }

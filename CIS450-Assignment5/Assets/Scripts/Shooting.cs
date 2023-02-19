@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public GameObject[] projectiles;
+    public BulletFactory bulletFactory;
     public Transform firePoint;
     public float projectileForce = 20f;
     public float timeBetweenShots = 0.5f;
@@ -21,13 +21,20 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        Shoot(KeyCode.Alpha1, "Red");
+        Shoot(KeyCode.Alpha2, "Green");
+        Shoot(KeyCode.Alpha3, "Blue");
+    }
+
+    void Shoot(KeyCode keyCode, string bulletColor)
+    {
+        if (Input.GetKeyDown(keyCode))
         {
             bool canShoot = Time.time > nextShotTime;
 
             if (canShoot)
             {
-                GameObject projectile = Instantiate(projectiles[0], firePoint.position, firePoint.rotation);
+                GameObject projectile = bulletFactory.SpawnBullet(bulletColor, firePoint.position, firePoint.rotation);
 
                 Rigidbody rb = projectile.GetComponent<Rigidbody>();
                 rb.AddForce(firePoint.forward * projectileForce, ForceMode.Impulse);
